@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paydo.tj - Транспорт</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <a href="index.html" class="logo">Paydo.tj</a>
+      <nav class="nav">
+        <div class="dropdown">
+          <button class="dropdown-toggle">Категории</button>
+          <div class="dropdown-menu" id="category-dropdown"></div>
+        </div>
+        <button class="btn primary-btn">Разместить объявление</button>
+        <button class="btn secondary-btn">Войти</button>
+      </nav>
+    </div>
+  </header>
+
+  <div class="search-bar">
+    <div class="container">
+      <select id="category-select">
+        <option>Все категории</option>
+      </select>
+      <input type="text" placeholder="Поиск по объявлениям..." class="search-input">
+      <button class="btn primary-btn">Найти</button>
+    </div>
+  </div>
+
+  <section class="container">
+    <h2>Транспорт</h2>
+    <div class="grid" id="subcategories-grid"></div>
+    <h2>Объявления</h2>
+    <div class="grid" id="listings-grid"></div>
+  </section>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+  <script>
+    // Инициализация страницы категории "Транспорт"
+    document.addEventListener('DOMContentLoaded', () => {
+      populateCategoriesDropdown();
+      populateCategorySelect('transport');
+      populateSubcategoriesGrid('transport');
+      populateListingsGrid('transport');
+    });
+  </script>
+</body>
+</html>

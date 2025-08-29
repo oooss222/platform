@@ -1,0 +1,287 @@
+/* Общие стили для приложения */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #F8F9FA;
+  margin: 0;
+  padding: 0;
+}
+
+/* Контейнер для центрирования контента */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Стили для заголовка */
+.header {
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #FF6F00;
+  text-decoration: none;
+}
+
+.nav {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+/* Стили для выпадающего меню */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-toggle {
+  background-color: #fff;
+  border: 1px solid #6c757d;
+  border-radius: 20px;
+  padding: 8px 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  min-width: 150px;
+  z-index: 100;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 8px 12px;
+  text-decoration: none;
+  color: #333;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f8f9fa;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Стили для кнопок */
+.btn {
+  padding: 8px 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.primary-btn {
+  background-color: #FF6F00;
+  color: #fff;
+  border: none;
+}
+
+.secondary-btn {
+  background-color: #fff;
+  border: 1px solid #6c757d;
+  border-radius: 20px;
+  color: #6c757d;
+}
+
+/* Стили для поисковой панели */
+.search-bar {
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 15px 0;
+}
+
+.search-bar .container {
+  display: flex;
+  gap: 10px;
+}
+
+.search-bar select {
+  max-width: 180px;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+.search-input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+/* Стили для заголовков */
+h2 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/* Стили для сетки */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 15px;
+}
+
+@media (min-width: 576px) {
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  }
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
+/* Стили для карточек категорий и подкатегорий */
+.category-card, .subcategory-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+  color: #333;
+  transition: box-shadow 0.2s;
+}
+
+.category-card:hover, .subcategory-card:hover {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+.category-card i {
+  font-size: 2rem;
+  color: #FF6F00;
+  margin-bottom: 10px;
+}
+
+.category-card span, .subcategory-card span {
+  font-weight: 600;
+  color: #333;
+}
+
+/* Стили для карточек объявлений */
+.listing-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  color: #333;
+  transition: box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+}
+
+.listing-card:hover {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+.listing-image {
+  background-color: #e9ecef;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.listing-image i {
+  font-size: 3rem;
+  color: #6c757d;
+}
+
+.listing-body {
+  padding: 15px;
+}
+
+.listing-body h5 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 5px;
+}
+
+.listing-body .price {
+  color: #FF6F00;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.listing-body .location {
+  color: #6c757d;
+  font-size: 0.85rem;
+  margin-bottom: 5px;
+}
+
+.listing-body .badge {
+  background-color: #28a745;
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+}
+
+/* Стили для страницы объявления */
+.listing-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.listing-details-image {
+  flex: 1 1 100%;
+  background-color: #e9ecef;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+}
+
+.listing-details-image i {
+  font-size: 3rem;
+  color: #6c757d;
+}
+
+.listing-details-content {
+  flex: 1 1 100%;
+}
+
+.listing-details-content .price {
+  font-size: 1.5rem;
+  color: #FF6F00;
+  font-weight: bold;
+}
+
+@media (min-width: 768px) {
+  .listing-details-image {
+    flex: 1 1 50%;
+  }
+  .listing-details-content {
+    flex: 1 1 50%;
+  }
+}
